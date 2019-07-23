@@ -220,7 +220,7 @@
 			},
 			{
 				"name": "java_binaries",
-				"value": "./build/libs",
+				"value": "build/classes/java",
 				"type": "string"
 			},
 			{
