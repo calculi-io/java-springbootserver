@@ -217,6 +217,21 @@
 				"name": "os.version",
 				"value": "latest",
 				"type": "string"
+			},
+			{
+				"name": "java_binaries",
+				"value": "./build/libs",
+				"type": "string"
+			},
+			{
+				"name": "source_dirs",
+				"value": "src/main/java",
+				"type": "string"
+			},
+			{
+				"name": "test_dirs",
+				"value": "src/test/java",
+				"type": "string"
 			}
 		],
 		"deployment_files": [],
