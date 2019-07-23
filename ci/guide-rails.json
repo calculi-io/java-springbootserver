@@ -38,7 +38,7 @@
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "./gradlew build\ncp build/libs/*.war .",
+						"command": "chmod u+x ./gradlew\n./gradlew build\ncp build/libs/*.war .",
 						"properties": null
 					}
 				],
