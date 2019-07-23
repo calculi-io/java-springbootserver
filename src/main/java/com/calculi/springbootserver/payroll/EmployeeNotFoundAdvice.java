@@ -1,4 +1,4 @@
-package com.calculi.SpringBootServer.payroll;
+package com.calculi.springbootserver.payroll;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
