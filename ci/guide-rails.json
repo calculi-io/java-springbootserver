@@ -38,7 +38,7 @@
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "gradle build\ncp build/libs/*.war .",
+						"command": "./gradlew build\ncp build/libs/*.war .",
 						"properties": null
 					}
 				],
