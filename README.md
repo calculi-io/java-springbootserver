@@ -2,8 +2,8 @@
 
 ## Requirements
 
-* Gradle 5.x+
-* Java 12
+* Gradle 5
+* OpenJDK 12.0.1
 
 ## Running the Applicaiton
 
