@@ -1,4 +1,4 @@
-# SpringBoot Sample Server
+# SpringBoot Server
 
 ## Requirements
 
