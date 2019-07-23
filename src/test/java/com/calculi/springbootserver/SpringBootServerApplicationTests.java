@@ -1,4 +1,4 @@
-package com.calculi.SpringBootServer;
+package com.calculi.springbootserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

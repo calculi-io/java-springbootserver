@@ -1,4 +1,4 @@
-package com.calculi.SpringBootServer;
+package com.calculi.springbootserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
