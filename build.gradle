@@ -1,5 +1,6 @@
 plugins {
 	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'jacoco'
 	id 'java'
 	id 'war'
 }
@@ -20,6 +21,18 @@ test {
 	reports {
 		junitXml.enabled = true
 	}
+	finalizedBy jacocoTestReport
+}
+
+jacoco {
+    toolVersion = "0.8.4"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+		xml.destination file("coverage.xml")
+    }
 }
 
 repositories {
