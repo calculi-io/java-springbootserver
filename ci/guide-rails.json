@@ -38,7 +38,7 @@
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "apt-get -y install software-properties-common java-common\napt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\nupdate-java-alternatives -s zulu-12-amd64\njava -version\n\nupdate-java-alternatives --list\nprintenv | sort | grep JAVA\n\nchmod u+x ./gradlew\n./gradlew build\ncp build/libs/*.war .",
+						"command": "apt-get -y install software-properties-common java-common\napt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\nupdate-java-alternatives -s zulu-12-amd64\njava -version\n\nupdate-java-alternatives --list\nexport JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\nprintenv | sort | grep JAVA\n\nchmod u+x ./gradlew\n./gradlew build\ncp build/libs/*.war .",
 						"properties": null
 					}
 				],
