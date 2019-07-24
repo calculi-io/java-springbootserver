@@ -16,6 +16,12 @@ configurations {
 	}
 }
 
+test {
+	reports {
+		junitXml.enabled = true
+	}
+}
+
 repositories {
 	mavenCentral()
 }

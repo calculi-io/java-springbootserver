@@ -38,7 +38,7 @@
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "apt-get -y install software-properties-common\necho removed java-common\napt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\necho update-java-alternatives -s zulu-12-amd64\njava -version\necho update-java-alternatives --list\nexport JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\nprintenv | grep JAVA\nchmod u+x ./gradlew\necho GRADLE BUILD\n./gradlew build\ncp build/libs/*.war .\necho ALL FILES\nls -latr\necho ALTERNATIVES ja*\nls -latr /etc/alternatives/ja*",
+						"command": "apt-get -y install software-properties-common\necho removed java-common\napt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\necho update-java-alternatives -s zulu-12-amd64\njava -version\necho update-java-alternatives --list\nexport JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\nprintenv | grep JAVA\nchmod u+x ./gradlew\necho GRADLE BUILD\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/libs/*.war .\necho ALL FILES\nls -latr\necho ALTERNATIVES ja*\nls -latr /etc/alternatives/ja*",
 						"properties": null
 					}
 				],
