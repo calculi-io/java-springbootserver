@@ -36,15 +36,9 @@
 						"properties": null
 					},
 					{
-						"name": "Install Zulu OpenJDK 12",
-						"definition": "Install Zulu OpenJDK 12",
-						"command": "apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\nexport JAVA_HOME=/usr/lib/jvm/zulu-12-amd64",
-						"properties": null
-					},
-					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/libs/*.war .\n",
+						"command": "apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\nexport JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/libs/*.war .\n",
 						"properties": null
 					}
 				],
