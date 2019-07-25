@@ -139,7 +139,7 @@
 						"installed_path": ""
 					},
 					{
-						"name": "integrationtest",
+						"name": "integration",
 						"dependencies": [],
 						"downloads": [],
 						"files": [
