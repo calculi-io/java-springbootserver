@@ -225,18 +225,8 @@
 				"type": "string"
 			},
 			{
-				"name": "java_binaries",
-				"value": "build/classes/java/main",
-				"type": "string"
-			},
-			{
-				"name": "source_dirs",
-				"value": "src/main/java",
-				"type": "string"
-			},
-			{
-				"name": "test_dirs",
-				"value": "src/test/java",
+				"name": "additional_properties_file",
+				"value": "sonar-project.properties",
 				"type": "string"
 			}
 		],
