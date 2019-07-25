@@ -4,3 +4,7 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219B
 apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
 apt-get update
 apt -y install zulu-12
+
+cp ${PKG_BASE_DIR}/server/SpringBootServer*.war .
+java -jar SpringBootServer-1.0.1.war &
+echo $! >${APPLICATION_PID_FILE}
