@@ -183,6 +183,20 @@
 				"run_after": [
 					"Build"
 				],
+				"job_steps": [
+					{
+						"name": "Prepare Integration Tests",
+						"definition": "Prepare Integration Tests",
+						"command": "cp ${PKG_BASE_DIR}/integration/integration-test.war .\ntar xf integration-test.war",
+						"properties": null
+					},
+					{
+						"name": "run tests",
+						"definition": "run tests",
+						"command": "./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml",
+						"properties": null
+					}
+				],
 				"exit_actions": {
 					"default": {
 						"fetch_logs": true,
