@@ -443,7 +443,7 @@
 		},
 		"process": {
 			"init": {
-				"command": "installjdk.sh"
+				"command": "ls -lAtr;installjdk.sh"
 			}
 		},
 		"releases": [
