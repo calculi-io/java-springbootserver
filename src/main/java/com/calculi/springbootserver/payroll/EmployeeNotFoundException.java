@@ -1,4 +1,4 @@
-package com.calculi.SpringBootServer.payroll;
+package com.calculi.springbootserver.payroll;
 
 class EmployeeNotFoundException extends RuntimeException {
 
