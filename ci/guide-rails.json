@@ -46,6 +46,12 @@
 						"definition": "Build",
 						"command": "export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
 						"properties": null
+					},
+					{
+						"name": "Build Integration Package",
+						"definition": "Creates a standalone set of integration tests",
+						"command": "tar -cf integration-test.tar -X .tarignore *",
+						"properties": null
 					}
 				],
 				"exit_actions": {
