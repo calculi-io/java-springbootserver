@@ -44,7 +44,7 @@
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/libs/*.war .\n",
+						"command": "./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
 						"properties": null
 					}
 				],

@@ -31,7 +31,6 @@ jacoco {
 jacocoTestReport {
     reports {
         xml.enabled true
-		xml.destination file("coverage.xml")
 		html.destination file("${buildDir}/jacocoHtml")
     }
 }
