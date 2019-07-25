@@ -129,11 +129,21 @@
 				},
 				"packages": [
 					{
-						"name": "((application.name))",
+						"name": "server",
 						"dependencies": [],
 						"downloads": [],
 						"files": [
-							"((application.name))*"
+							"SpringBootServer*.war"
+						],
+						"package_install_command": "",
+						"installed_path": ""
+					},
+					{
+						"name": "isolationtest",
+						"dependencies": [],
+						"downloads": [],
+						"files": [
+							"isolation-test.tar"
 						],
 						"package_install_command": "",
 						"installed_path": ""
