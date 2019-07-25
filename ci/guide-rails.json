@@ -250,6 +250,10 @@
 						"command": ""
 					}
 				},
+				"package_dependencies": [
+					"server",
+					"integration"
+				],
 				"instance_tags": [
 					{
 						"name": "application.name",
