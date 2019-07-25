@@ -408,14 +408,19 @@
 				"type": "string"
 			}
 		],
-		"deployment_files": [],
+		"deployment_files": [
+			{
+				"source_path": "ci/installjdk.sh",
+				"target_path": "installjdk.sh"
+			}
+		],
 		"application_init": {
 			"command": "",
 			"arguments": null
 		},
 		"process": {
 			"init": {
-				"command": ""
+				"command": "installjdk.sh"
 			}
 		},
 		"releases": [
