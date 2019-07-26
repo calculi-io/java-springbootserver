@@ -464,7 +464,7 @@
 			},
 			"stop": {
 				"command": [
-					"kill 'cat SpringBootServer.pid'",
+					"kill `cat SpringBootServer.pid`",
 					"rm SpringbootServer.pid"
 				]
 			},
