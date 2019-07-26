@@ -444,7 +444,7 @@
 		},
 		"process": {
 			"init": {
-				"command": "start.sh"
+				"command": "chmod  755 start.sh;start.sh"
 			}
 		},
 		"releases": [
