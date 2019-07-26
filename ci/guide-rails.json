@@ -130,7 +130,9 @@
 				"packages": [
 					{
 						"name": "server",
-						"dependencies": [],
+						"dependencies": [
+							"jdk"
+						],
 						"downloads": [],
 						"files": [
 							"SpringBootServer*.war"
@@ -146,6 +148,19 @@
 							"integration-test.tar"
 						],
 						"package_install_command": "",
+						"installed_path": ""
+					},
+					{
+						"name": "jdk",
+						"dependencies": [],
+						"downloads": [
+							{
+								"link": "https://s3.amazonaws.com/calculi-middleware/jdk-12_linux-x64_bin.tar.gz",
+								"name": "jdk.tar.gz"
+							}
+						],
+						"files": [],
+						"package_install_command": "tar xzf jdk/jdk.tar.gz\ncp -Rf jdk-12/* ${BOSH_INSTALL_TARGET}",
 						"installed_path": ""
 					}
 				],
@@ -194,7 +209,7 @@
 					{
 						"name": "run tests",
 						"definition": "run tests",
-						"command": "export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml",
+						"command": "echo export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml",
 						"properties": null
 					}
 				],
@@ -276,7 +291,8 @@
 				},
 				"package_dependencies": [
 					"server",
-					"integration"
+					"integration",
+					"jdk"
 				],
 				"instance_tags": [
 					{
