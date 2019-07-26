@@ -7,4 +7,4 @@ apt -y install zulu-12
 
 cp ${PKG_BASE_DIR}/server/SpringBootServer*.war .
 java -jar SpringBootServer-1.0.1.war &
-echo $! >${APPLICATION_PID_FILE}
+echo $! >SpringBootServer.pid
