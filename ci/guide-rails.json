@@ -434,8 +434,8 @@
 		],
 		"deployment_files": [
 			{
-				"source_path": "ci/installjdk.sh",
-				"target_path": "installjdk.sh"
+				"source_path": "ci/start.sh",
+				"target_path": "start.sh"
 			}
 		],
 		"application_init": {
@@ -444,7 +444,7 @@
 		},
 		"process": {
 			"init": {
-				"command": "ls -lAtr;installjdk.sh"
+				"command": "start.sh"
 			}
 		},
 		"releases": [
