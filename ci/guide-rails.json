@@ -462,9 +462,15 @@
 			"init": {
 				"command": "bin/start.sh"
 			},
+			"stop": {
+				"command": [
+					"kill 'cat SpringBootServer.pid'",
+					"rm SpringbootServer.pid"
+				]
+			},
 			"pid": {
 				"command": [
-					"cp SpringBoogServer.pid ${APPLICATION_PID_FILE}"
+					"cp SpringBootServer.pid ${APPLICATION_PID_FILE}"
 				]
 			}
 		},
