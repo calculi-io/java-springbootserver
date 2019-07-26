@@ -444,7 +444,7 @@
 		},
 		"process": {
 			"init": {
-				"command": "chmod  755 start.sh;./start.sh"
+				"command": "whoami;chmod  755 start.sh;./start.sh"
 			},
 			"pid": {
 				"command": [
