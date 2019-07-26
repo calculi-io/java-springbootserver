@@ -451,7 +451,7 @@
 		"deployment_files": [
 			{
 				"source_path": "ci/start.sh",
-				"target_path": "start.sh"
+				"target_path": "bin/start.sh"
 			}
 		],
 		"application_init": {
@@ -460,7 +460,7 @@
 		},
 		"process": {
 			"init": {
-				"command": "start.sh"
+				"command": "bin/start.sh"
 			},
 			"pid": {
 				"command": [
