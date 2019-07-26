@@ -445,6 +445,11 @@
 		"process": {
 			"init": {
 				"command": "chmod  755 start.sh;start.sh"
+			},
+			"pid": {
+				"command": [
+					"cp SpringBoogServer.pid ${APPLICATION_PID_FILE}"
+				]
 			}
 		},
 		"releases": [
