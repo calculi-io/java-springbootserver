@@ -178,8 +178,8 @@
 				}
 			},
 			{
-				"name": "Isolation",
-				"segment_type": "isolation",
+				"name": "Integration",
+				"segment_type": "integration",
 				"persistent": true,
 				"run_after": [
 					"Build"
@@ -292,10 +292,10 @@
 						"vm_type": "default",
 						"os_type": "default",
 						"networks": [
-							"((deploy.target.network.isolation))"
+							"((deploy.target.network.integration))"
 						],
 						"availability_zones": [
-							"((deploy.target.zone.isolation))"
+							"((deploy.target.zone.integration))"
 						],
 						"deployment_strategy": {},
 						"dependencies": [
