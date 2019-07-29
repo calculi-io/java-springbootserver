@@ -8,7 +8,7 @@
 
 if [ -f SpringBootServer.pid ]; then
 	kill `cat SpringBootServer.pid`
-	rm SpringbootServer.pid
+	rm SpringBootServer.pid
 fi
 
 export JAVA_HOME=${PKG_BASE_DIR}/jdk
@@ -16,4 +16,5 @@ export PATH=${PKG_BASE_DIR}/jdk/bin:${PATH}
 
 cp ${PKG_BASE_DIR}/server/SpringBootServer*.war .
 java -jar SpringBootServer-1.0.1.war &
-echo $! >SpringBootServer.pid
+# echo $! >SpringBootServer.pid
+ps -A -o pid,cmd|grep java | grep -v grep |head -n 1 | awk '{print $1}'>SpringBootServer.pid
