@@ -6,6 +6,11 @@
 # apt-get update
 # apt -y install zulu-12
 
+if [ -f SpringBootServer.pid ]; then
+	kill `cat SpringBootServer.pid`
+	rm SpringbootServer.pid
+fi
+
 export JAVA_HOME=${PKG_BASE_DIR}/jdk
 export PATH=${PKG_BASE_DIR}/jdk/bin:${PATH}
 
