@@ -215,7 +215,7 @@
 					{
 						"name": "run tests",
 						"definition": "run tests",
-						"command": "echo export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml",
+						"command": "echo export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml\ncp test.xml ${TEST_LOGS_DIR}/",
 						"properties": null
 					}
 				],
