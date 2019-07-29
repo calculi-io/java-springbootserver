@@ -201,6 +201,12 @@
 				],
 				"job_steps": [
 					{
+						"name": "env",
+						"definition": "env",
+						"command": "printenv | sort",
+						"properties": null
+					},
+					{
 						"name": "Prepare Integration Tests",
 						"definition": "Prepare Integration Tests",
 						"command": "cp ${PKG_BASE_DIR}/integration/integration-test.war .\ntar xf integration-test.war",
