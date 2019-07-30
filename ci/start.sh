@@ -16,5 +16,6 @@ export PATH=${PKG_BASE_DIR}/jdk/bin:${PATH}
 
 cp ${PKG_BASE_DIR}/server/SpringBootServer*.war .
 java -jar SpringBootServer-1.0.1.war &
+sleep 5
 # echo $! >SpringBootServer.pid
 ps -A -o pid,cmd|grep java | grep -v grep |head -n 1 | awk '{print $1}'>SpringBootServer.pid
