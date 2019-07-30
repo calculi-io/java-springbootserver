@@ -209,13 +209,13 @@
 					{
 						"name": "Prepare Integration Tests",
 						"definition": "Prepare Integration Tests",
-						"command": "echo cp ${PKG_BASE_DIR}/integration/integration-test.war .\necho tar xf integration-test.war\ntar xf ${PKG_BASE_DIR}/integration/integration-test.tar",
+						"command": "tar xf ${PKG_BASE_DIR}/integration/integration-test.tar",
 						"properties": null
 					},
 					{
 						"name": "run tests",
 						"definition": "run tests",
-						"command": "echo export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml\ncp test.xml ${TEST_LOGS_DIR}/",
+						"command": "export JAVA_HOME=${PKG_BASE_DIR}/jdk\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml\ncp test.xml ${TEST_LOGS_DIR}/",
 						"properties": null
 					}
 				],
@@ -475,7 +475,7 @@
 			},
 			"pid": {
 				"command": [
-					"ps -A -o pid,cmd|grep java | grep -v grep |head -n 1 | awk '{print $1}'>${APPLICATION_PID_FILE}"
+					"ps -A -o pid,cmd|grep java | grep -v grep |head -n 1 | awk '{print $1}'\u003e${APPLICATION_PID_FILE}"
 				]
 			}
 		},
