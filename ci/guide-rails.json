@@ -474,11 +474,8 @@
 					"rm SpringbootServer.pid"
 				]
 			},
-			"pid": {
-				"command": [
-					"cp SpringBootServer.pid ${APPLICATION_PID_FILE}"
-				]
-			}
+			"pid": {},
+			"name": "java"
 		},
 		"releases": [
 			{
