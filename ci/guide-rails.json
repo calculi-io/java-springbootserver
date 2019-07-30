@@ -470,12 +470,14 @@
 			},
 			"stop": {
 				"command": [
-					"kill `cat SpringBootServer.pid`",
-					"rm SpringbootServer.pid"
+					"kill `cat ${APPLICATION_PID_FILE}`"
 				]
 			},
-			"pid": {},
-			"name": "java"
+			"pid": {
+				"command": [
+					"ps -A -o pid,cmd|grep java | grep -v grep |head -n 1 | awk '{print $1}'>${APPLICATION_PID_FILE}"
+				]
+			}
 		},
 		"releases": [
 			{
