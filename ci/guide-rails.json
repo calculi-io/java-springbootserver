@@ -209,7 +209,7 @@
 					{
 						"name": "Prepare Integration Tests",
 						"definition": "Prepare Integration Tests",
-						"command": "cp ${PKG_BASE_DIR}/integration/integration-test.war .\ntar xf integration-test.war",
+						"command": "echo cp ${PKG_BASE_DIR}/integration/integration-test.war .\necho tar xf integration-test.war\ntar xf ${PKG_BASE_DIR}/integration/integration-test.tar",
 						"properties": null
 					},
 					{
@@ -468,8 +468,16 @@
 			"init": {
 				"command": "bin/start.sh"
 			},
-			"stop": {},
-			"pid": {}
+			"stop": {
+				"command": [
+					"kill `cat ${APPLICATION_PID_FILE}`"
+				]
+			},
+			"pid": {
+				"command": [
+					"ps -A -o pid,cmd|grep java | grep -v grep |head -n 1 | awk '{print $1}'>${APPLICATION_PID_FILE}"
+				]
+			}
 		},
 		"releases": [
 			{
