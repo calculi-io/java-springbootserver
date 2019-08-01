@@ -1,0 +1,11 @@
+.gradle/
+.scannerwork/
+.tarignore
+build/
+ci/
+HELP.md
+integration-test.tar
+README.md
+sonar-project.properties
+src/main/
+src/test/

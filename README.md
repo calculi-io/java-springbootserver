@@ -3,7 +3,7 @@
 ## Requirements
 
 * Gradle 5
-* OpenJDK 12.0.1
+* OpenJDK 12
 
 ## Running the Applicaiton
 
@@ -21,6 +21,9 @@ curl -v http://localhost:8080/employees
 curl -v http://localhost:8080/employees/1
 ```
 
-## References
+## Running Tests
 
-<https://spring.io/guides/tutorials/rest/>
+```sh
+gradle test
+gradle integration-test
+```
