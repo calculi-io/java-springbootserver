@@ -30,21 +30,15 @@
 				"segment_type": "build",
 				"job_steps": [
 					{
-						"name": "Print Env",
-						"definition": "Print Environment",
-						"command": "printenv | sort",
-						"properties": null
-					},
-					{
 						"name": "Install Zulu-12",
 						"definition": "Install Zulu-12",
-						"command": "apt-get -y install software-properties-common\napt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\nexport JAVA_HOME=/usr/lib/jvm/zulu-12-amd64",
+						"command": "curl -O https://cdn.azul.com/zulu/bin/zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\n\ntar xf zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\nmv zulu12.3.11-ca-jdk12.0.2-linux_x64 jdk\nexport JAVA_HOME=${PWD}/jdk",
 						"properties": null
 					},
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
+						"command": "export JAVA_HOME=${PWD}/jdk\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
 						"properties": null
 					},
 					{
@@ -196,12 +190,6 @@
 					"Build"
 				],
 				"job_steps": [
-					{
-						"name": "env",
-						"definition": "env",
-						"command": "printenv | sort",
-						"properties": null
-					},
 					{
 						"name": "Prepare Integration Tests",
 						"definition": "Prepare Integration Tests",
