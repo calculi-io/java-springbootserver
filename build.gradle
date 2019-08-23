@@ -8,7 +8,7 @@ plugins {
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.calculi'
-version = '1.0.1'
+version = '1.0.0'
 sourceCompatibility = '12'
 
 sourceSets {
