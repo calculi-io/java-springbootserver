@@ -3,7 +3,7 @@
 .tarignore
 build/
 ci/
-HELP.md
+bin/
 integration-test.tar
 README.md
 sonar-project.properties
