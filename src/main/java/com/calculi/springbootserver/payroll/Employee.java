@@ -12,7 +12,10 @@ class Employee {
 
   private @Id @GeneratedValue Long id;
 
-  Employee() {}
+  Employee() {
+	private String name;
+	private String role;
+  }
 
   Employee(String name, String role) {
     this.name = name;
