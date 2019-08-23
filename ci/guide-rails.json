@@ -30,7 +30,7 @@
 				"segment_type": "build",
 				"job_steps": [
 					{
-						"name": "Install Zulu-12",
+						"name": "Install JDK 12",
 						"definition": "Install Zulu-12",
 						"command": "curl -O https://cdn.azul.com/zulu/bin/zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\ntar xf zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\nmv zulu12.3.11-ca-jdk12.0.2-linux_x64 jdk",
 						"properties": null
@@ -45,6 +45,12 @@
 						"name": "Build Integration Package",
 						"definition": "Creates a standalone set of integration tests",
 						"command": "tar -cf integration-test.tar -X .tarignore *",
+						"properties": null
+					},
+					{
+						"name": "list",
+						"definition": "directory listing",
+						"command": "ls -latr\nls -latr jdk",
 						"properties": null
 					}
 				],
