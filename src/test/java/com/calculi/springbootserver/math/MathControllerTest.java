@@ -56,6 +56,13 @@ public class MathControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("1.5")));
 	}
+
+	@Test
+	public void getDivByZero() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/div/3/0").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("\"Infinity\"")));
+	}
 	
 	@Test
 	public void getSqrt() throws Exception {
