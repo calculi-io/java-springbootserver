@@ -131,10 +131,7 @@
 					{
 						"name": "server",
 						"dependencies": [
-							"jdk/bin",
-							"jdk/lib",
-							"jdk/conf",
-							"jdk/jmods"
+							"jdk"
 						],
 						"downloads": [],
 						"files": [
@@ -158,7 +155,10 @@
 						"dependencies": [],
 						"downloads": [],
 						"files": [
-							"jdk"
+							"jdk/bin",
+							"jdk/lib",
+							"jdk/conf",
+							"jdk/jmods"
 						],
 						"package_install_command": "",
 						"installed_path": ""
