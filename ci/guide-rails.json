@@ -38,7 +38,7 @@
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "export JAVA_HOME=${PWD}/jdk\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.math.MathControllerTest.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
+						"command": "export JAVA_HOME=${PWD}/jdk\n./gradlew build --no-daemon\ncp build/test-results/test/TEST-com.calculi.springbootserver.math.MathControllerTest.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
 						"properties": null
 					},
 					{
@@ -208,7 +208,7 @@
 					{
 						"name": "run tests",
 						"definition": "run tests",
-						"command": "export JAVA_HOME=${PKG_BASE_DIR}/jdk\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-MathIntegrationTest.xml ${TEST_LOGS_DIR}/test.xml",
+						"command": "export JAVA_HOME=${PKG_BASE_DIR}/jdk\n./gradlew integrationTest --no-daemon\ncp build/test-results/integrationTest/TEST-MathIntegrationTest.xml ${TEST_LOGS_DIR}/test.xml",
 						"properties": null
 					}
 				],
