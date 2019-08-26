@@ -208,7 +208,7 @@
 					{
 						"name": "run tests",
 						"definition": "run tests",
-						"command": "export JAVA_HOME=${PKG_BASE_DIR}/jdk\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-MathIntegrationTest.xml test.xml\ncp test.xml ${TEST_LOGS_DIR}/",
+						"command": "export JAVA_HOME=${PKG_BASE_DIR}/jdk\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-MathIntegrationTest.xml ${TEST_LOGS_DIR}/test.xml",
 						"properties": null
 					}
 				],
