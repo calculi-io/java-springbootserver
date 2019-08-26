@@ -132,7 +132,9 @@
 						"name": "server",
 						"dependencies": [
 							"jdk/bin",
-							"jdk/lib"
+							"jdk/lib",
+							"jdk/conf",
+							"jdk/jmods"
 						],
 						"downloads": [],
 						"files": [
