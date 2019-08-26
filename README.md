@@ -8,13 +8,6 @@
 ## Running the Application
 
 ```sh
-gradle build
-java -jar ./build/libs/SpringBootServer-1.0.1.war
-```
-
-or
-
-```sh
 gradle bootRun
 ```
 
