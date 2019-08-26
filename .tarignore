@@ -1,11 +1,13 @@
 .gradle/
 .scannerwork/
 .tarignore
+bin/
 build/
 ci/
-HELP.md
+coverage.xml
 integration-test.tar
 README.md
 sonar-project.properties
 src/main/
 src/test/
+test.xml

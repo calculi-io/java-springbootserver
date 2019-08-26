@@ -30,27 +30,27 @@
 				"segment_type": "build",
 				"job_steps": [
 					{
-						"name": "Print Env",
-						"definition": "Print Environment",
-						"command": "printenv | sort",
-						"properties": null
-					},
-					{
-						"name": "Install Zulu-12",
+						"name": "Install JDK 12",
 						"definition": "Install Zulu-12",
-						"command": "apt-get -y install software-properties-common\napt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9\napt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'\napt-get update\napt -y install zulu-12\nexport JAVA_HOME=/usr/lib/jvm/zulu-12-amd64",
+						"command": "curl -O https://cdn.azul.com/zulu/bin/zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\ntar xf zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\nmv zulu12.3.11-ca-jdk12.0.2-linux_x64 jdk",
 						"properties": null
 					},
 					{
 						"name": "Build",
 						"definition": "Build",
-						"command": "export JAVA_HOME=/usr/lib/jvm/zulu-12-amd64\n./gradlew build\ncp build/test-results/test/TEST-com.calculi.springbootserver.SpringBootServerApplicationTests.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
+						"command": "export JAVA_HOME=${PWD}/jdk\n./gradlew build --no-daemon\ncp build/test-results/test/TEST-com.calculi.springbootserver.math.MathControllerTest.xml test.xml\ncp build/reports/jacoco/test/jacocoTestReport.xml coverage.xml\ncp build/libs/*.war .\n",
 						"properties": null
 					},
 					{
 						"name": "Build Integration Package",
 						"definition": "Creates a standalone set of integration tests",
 						"command": "tar -cf integration-test.tar -X .tarignore *",
+						"properties": null
+					},
+					{
+						"name": "list",
+						"definition": "directory listing",
+						"command": "ls -latr\nls -latr jdk",
 						"properties": null
 					}
 				],
@@ -153,14 +153,14 @@
 					{
 						"name": "jdk",
 						"dependencies": [],
-						"downloads": [
-							{
-								"link": "https://s3.amazonaws.com/calculi-middleware/jdk-12_linux-x64_bin.tar.gz",
-								"name": "jdk.tar.gz"
-							}
+						"downloads": [],
+						"files": [
+							"jdk/bin",
+							"jdk/lib",
+							"jdk/conf",
+							"jdk/jmods"
 						],
-						"files": [],
-						"package_install_command": "tar xzf jdk/jdk.tar.gz\ncp -Rf jdk-12/* ${BOSH_INSTALL_TARGET}",
+						"package_install_command": "",
 						"installed_path": ""
 					}
 				],
@@ -200,12 +200,6 @@
 				],
 				"job_steps": [
 					{
-						"name": "env",
-						"definition": "env",
-						"command": "printenv | sort",
-						"properties": null
-					},
-					{
 						"name": "Prepare Integration Tests",
 						"definition": "Prepare Integration Tests",
 						"command": "tar xf ${PKG_BASE_DIR}/integration/integration-test.tar",
@@ -214,7 +208,7 @@
 					{
 						"name": "run tests",
 						"definition": "run tests",
-						"command": "export JAVA_HOME=${PKG_BASE_DIR}/jdk\n./gradlew integrationTest\ncp build/test-results/integrationTest/TEST-ZeroTest.xml test.xml\ncp test.xml ${TEST_LOGS_DIR}/",
+						"command": "export JAVA_HOME=${PKG_BASE_DIR}/jdk\n./gradlew integrationTest --no-daemon\ncp build/test-results/integrationTest/TEST-MathIntegrationTest.xml ${TEST_LOGS_DIR}/test.xml",
 						"properties": null
 					}
 				],
@@ -455,7 +449,7 @@
 		],
 		"deployment_files": [
 			{
-				"source_path": "ci/start.sh",
+				"source_path": "ci/bin/start.sh",
 				"target_path": "bin/start.sh"
 			}
 		],
