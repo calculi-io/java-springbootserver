@@ -131,7 +131,8 @@
 					{
 						"name": "server",
 						"dependencies": [
-							"jdk/*"
+							"jdk/bin",
+							"jdk/lib"
 						],
 						"downloads": [],
 						"files": [
