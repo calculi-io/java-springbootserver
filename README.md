@@ -5,11 +5,17 @@
 * Gradle 5
 * OpenJDK 12
 
-## Running the Applicaiton
+## Running the Application
 
 ```sh
 gradle build
 java -jar ./build/libs/SpringBootServer-1.0.1.war
+```
+
+or
+
+```sh
+gradle bootRun
 ```
 
 ## Partial List of Endpoints
@@ -17,13 +23,13 @@ java -jar ./build/libs/SpringBootServer-1.0.1.war
 See the controller for the full list
 
 ```sh
-curl -v http://localhost:8080/employees
-curl -v http://localhost:8080/employees/1
+curl -v http://localhost:8080/
+curl -v http://localhost:8080/add/3/2
 ```
 
 ## Running Tests
 
 ```sh
-gradle test
-gradle integration-test
+gradle build
+gradle integrationTest
 ```
