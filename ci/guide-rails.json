@@ -32,7 +32,7 @@
 					{
 						"name": "Install JDK 12",
 						"definition": "Install Zulu-12",
-						"command": "curl -O https://cdn.azul.com/zulu/bin/zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\ntar xf zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\nmv zulu12.3.11-ca-jdk12.0.2-linux_x64 jdk",
+						"command": "curl -O https://cdn.azul.com/zulu/bin/zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz\ntar xf zulu12.3.11-ca-jdk12.0.2-linux_x64.tar.gz \nmv zulu12.3.11-ca-jdk12.0.2-linux_x64 jdk",
 						"properties": null
 					},
 					{
