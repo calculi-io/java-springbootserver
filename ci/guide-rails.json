@@ -57,52 +57,12 @@
 				"exit_actions": {
 					"default": {
 						"fetch_logs": true,
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
+						"notifications": [],
 						"code_analysis": {
 							"publish": true,
 							"properties": null
 						},
 						"delete_instances": true
-					},
-					"on_success": {
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
-						"code_analysis": null
-					},
-					"on_failure": {
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
-						"code_analysis": null
-					},
-					"on_abort": {
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
-						"code_analysis": null
 					}
 				},
 				"properties": [
@@ -215,61 +175,12 @@
 				"exit_actions": {
 					"default": {
 						"fetch_logs": true,
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
+						"notifications": [],
 						"code_analysis": {
 							"publish": false,
 							"properties": null
 						},
 						"delete_instances": true
-					},
-					"on_success": {
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
-						"code_analysis": {
-							"publish": false,
-							"properties": null
-						}
-					},
-					"on_failure": {
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
-						"code_analysis": {
-							"publish": false,
-							"properties": null
-						}
-					},
-					"on_abort": {
-						"notifications": [
-							{
-								"type": "slack",
-								"send_notification": false,
-								"to": null,
-								"message": ""
-							}
-						],
-						"code_analysis": {
-							"publish": false,
-							"properties": null
-						}
 					}
 				},
 				"deployment_strategy": {
@@ -382,52 +293,12 @@
 		"exit_actions": {
 			"default": {
 				"fetch_logs": true,
-				"notifications": [
-					{
-						"type": "slack",
-						"send_notification": false,
-						"to": null,
-						"message": ""
-					}
-				],
+				"notifications": [],
 				"code_analysis": {
 					"publish": true,
 					"properties": null
 				},
 				"delete_instances": true
-			},
-			"on_success": {
-				"notifications": [
-					{
-						"type": "slack",
-						"send_notification": false,
-						"to": null,
-						"message": ""
-					}
-				],
-				"code_analysis": null
-			},
-			"on_failure": {
-				"notifications": [
-					{
-						"type": "slack",
-						"send_notification": false,
-						"to": null,
-						"message": ""
-					}
-				],
-				"code_analysis": null
-			},
-			"on_abort": {
-				"notifications": [
-					{
-						"type": "slack",
-						"send_notification": false,
-						"to": null,
-						"message": ""
-					}
-				],
-				"code_analysis": null
 			}
 		},
 		"default_properties": [
